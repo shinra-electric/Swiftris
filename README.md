@@ -1,37 +1,12 @@
+# Swiftris
+Swiftris is a "Falling Blocks" clone written in Swift using UIKit.   
+The original code was by [Bloc](https://github.com/Bloc/swiftris). However it was originally written in Swift 3 which modern versions of Xcode are not able to modernise. 
 
-![icon](http://cfile4.uf.tistory.com/image/22348541568283BF1A3886)
-  
-# [Swiftris](http://hiddenviewer.tistory.com/285)
-- Swiftris is a swift version of Tetris game.   
-- It has been developed for the study. 
-- It's simple but impact. enjoy the game.
+The fork by [hiddenviewer](https://github.com/hiddenviewer/Swiftris) was written in `Swift 4.1`. This version is based on that fork, and I was able to use Xcode to update it to `Swift 5`. 
 
-  
+ 
 
-
-
-
-# 1. Swiftris Video
-- [View YouTube Video](https://www.youtube.com/watch?v=iPihhGjGUl4)
-
-![movie](http://cfile2.uf.tistory.com/image/256F5E455682A38006330E)  
-
-# 2.Control of Game    
-- Play: Touch a Play button.
-- Pause: Touch a Pause button.
-- Stop:  Touch a Stop button.
-
-![play](http://cfile23.uf.tistory.com/image/26736A40568284E61EF175) &nbsp;&nbsp; ![pause](http://cfile7.uf.tistory.com/image/212DD44D568284F73EF275)
-  
-
-- Move Left: Touch the left side of the brick.
-- Move Right: Touch the right side of the brick.
-- Rotate : Touch the top side of the brick.
-- Drop: Long touch the bottom side of the brick.
-
-
-
-# 3. Architecture
+# UIKit Architecture
 - ViewController.swift
 - Swiftris.swift
 - GameView.swift  
@@ -44,7 +19,7 @@
 
 
 ## GameBoard
-- GameBoard is 22 rows by 10 columns, Two-dimensional array of UIColor. 
+- The GameBoard is 22 rows by 10 columns, Two-dimensional array of UIColor. 
   
 ```  
 class GameBoard: UIView {
@@ -58,13 +33,12 @@ class GameBoard: UIView {
   
 ```  
 
-![gameboard](http://cfile1.uf.tistory.com/image/241CD247568285DF1F6D67)
 
 
 
-## Brick  
+## Bricks
 - 7 different types of bricks. I, J, L, T, Z, S, O.
-- Brick has a unique color.
+- Each brick has a unique colour.
 
 ```  
 enum BrickType {
@@ -94,12 +68,10 @@ class Brick: NSObject {
   
 ```  
 
-![bricks](http://cfile22.uf.tistory.com/image/22088249568285F527987D)
-  
   
   
 ## Swiftris
-- Process game logic and Interaction.
+- Game logic and Interaction.
 
 ```    
 class Swiftris: NSObject {
@@ -173,13 +145,10 @@ class GameScore: UIView {
   
 ```  
 
-
-![scores](http://cfile26.uf.tistory.com/image/237E4D4C56828629180256)
   
 ## NextBrick  
 - You can see the next three bricks that can be used to play in advance.
   
-![nextbricks](http://cfile28.uf.tistory.com/image/23503C50568286632A920D)
   
 ```    
 class Brick: NSObject {
@@ -219,13 +188,7 @@ class SoundManager: NSObject {
 ```  
 
 
-# 4. Feedback  
--  If you have any questions, please leave a message.
-- [hiddenviewer@gmail.com](hiddenviewer@gmail.com)
-
-
-
-# 5. License
+# License
 Swiftris is released under the MIT license. See LICENSE for details.
 
 
