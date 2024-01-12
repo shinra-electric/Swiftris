@@ -1,10 +1,9 @@
 # Swiftris
-Swiftris is a "Falling Blocks" clone written in Swift using UIKit.   
-The original code was by [Bloc](https://github.com/Bloc/swiftris). However it was originally written in Swift 3 which modern versions of Xcode are not able to modernise. 
+Swiftris is a "Falling Blocks" clone written in Swift using UIKit.
+The original code was by [Bloc](https://github.com/Bloc/swiftris). However it was originally written in `Swift 3` which modern versions of Xcode are not able to build.
 
-The fork by [hiddenviewer](https://github.com/hiddenviewer/Swiftris) was written in `Swift 4.1`. This version is based on that fork, and I was able to use Xcode to update it to `Swift 5`. 
+The fork by [hiddenviewer](https://github.com/hiddenviewer/Swiftris) was written in `Swift 4.1`. This version is based on that fork, and I was able to use Xcode to migrate it to use `Xcode 15` and `Swift 5`.
 
- 
 
 # UIKit Architecture
 - ViewController.swift
@@ -120,7 +119,6 @@ class Swiftris: NSObject {
 
 ## GameScore    
 - Game score is depending on number of lines are cleared. 10, 30, 60, 100 points.
-- This game did not implement the feature level. please implement your own.
 
 ```    
 
@@ -147,7 +145,7 @@ class GameScore: UIView {
 
   
 ## NextBrick  
-- You can see the next three bricks that can be used to play in advance.
+- You can see up to the next three bricks in advance
   
   
 ```    
@@ -173,8 +171,8 @@ class Brick: NSObject {
 
 
 ## SoundManager   
-- Provides some sound effects .
-- Background Music, Falling brick sound, Game over sound.
+- Provides some basic sound effects.
+- Background music, falling brick sound, game over sound.
   
 ```    
 class SoundManager: NSObject {
