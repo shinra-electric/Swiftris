@@ -12,7 +12,7 @@ class GameButton: UIButton {
 
     convenience init(title:String, frame: CGRect) {
         self.init(frame: frame)
-        self.setTitle(title, for: UIControlState())
+        self.setTitle(title, for: UIControl.State())
     }
     
     override init(frame: CGRect) {
@@ -27,7 +27,7 @@ class GameButton: UIButton {
     
     fileprivate func initializeView() {
         self.backgroundColor = UIColor.clear
-        self.setTitleColor(UIColor.white, for: UIControlState())
+        self.setTitleColor(UIColor.white, for: UIControl.State())
         self.titleLabel?.font = Swiftris.GameFont(18)
         self.layer.borderColor = UIColor.white.cgColor
         self.layer.borderWidth = 2

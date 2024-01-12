@@ -58,7 +58,7 @@ class GameScore: UIView {
         self.addConstraints(
             NSLayoutConstraint.constraints(
                 withVisualFormat: "H:|-[level(80)]-10-[lineClear(>=90)]-10-[score(lineClear)]-|",
-                options: NSLayoutFormatOptions.alignAllCenterY,
+                options: NSLayoutConstraint.FormatOptions.alignAllCenterY,
                 metrics: nil,
                 views: views)
         )
@@ -66,7 +66,7 @@ class GameScore: UIView {
         self.addConstraints(
             NSLayoutConstraint.constraints(
                 withVisualFormat: "[selfView]-(<=0)-[level]",
-                options: NSLayoutFormatOptions.alignAllCenterY,
+                options: NSLayoutConstraint.FormatOptions.alignAllCenterY,
                 metrics: nil,
                 views: views)
         )

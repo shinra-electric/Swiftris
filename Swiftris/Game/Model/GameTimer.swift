@@ -17,7 +17,7 @@ class GameTimer: NSObject {
         self.displayLink = CADisplayLink(target: target, selector: selector)
         self.displayLink.preferredFramesPerSecond = 30
         self.displayLink.isPaused = true
-        self.displayLink.add(to: RunLoop.current, forMode: RunLoopMode.defaultRunLoopMode)
+        self.displayLink.add(to: RunLoop.current, forMode: RunLoop.Mode.default)
     }
     
     func start() {
@@ -30,7 +30,7 @@ class GameTimer: NSObject {
         print("deinit GameTimer")
         
         if let link = self.displayLink {
-            link.remove(from: RunLoop.current, forMode: RunLoopMode.defaultRunLoopMode)
+            link.remove(from: RunLoop.current, forMode: RunLoop.Mode.default)
         }
     }
     

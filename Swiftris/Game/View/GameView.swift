@@ -85,7 +85,7 @@ class GameView: UIView {
         self.addConstraints(
             NSLayoutConstraint.constraints(
                 withVisualFormat: "H:[gameBoard]-[nextBrick]-|",
-                options: NSLayoutFormatOptions.alignAllTop,
+                options: NSLayoutConstraint.FormatOptions.alignAllTop,
                 metrics:nil ,
                 views:views))
         

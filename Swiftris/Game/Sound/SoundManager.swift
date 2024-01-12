@@ -29,7 +29,7 @@ class SoundManager: NSObject {
         
         let session = AVAudioSession.sharedInstance()
         do {
-            try session.setCategory(AVAudioSessionCategorySoloAmbient)
+            try session.setCategory(AVAudioSession.Category.soloAmbient)
         } catch {}
     }
     

@@ -76,11 +76,11 @@ class NextBrick: UIView {
     func makeGameButton() {
         // play and pause button
         self.gameButton.translatesAutoresizingMaskIntoConstraints = false
-        self.gameButton.addTarget(self, action: #selector(NextBrick.changeGameState(_:)), for: UIControlEvents.touchUpInside)
+        self.gameButton.addTarget(self, action: #selector(NextBrick.changeGameState(_:)), for: UIControl.Event.touchUpInside)
         self.addSubview(self.gameButton)
         
         self.stopButton.translatesAutoresizingMaskIntoConstraints = false
-        self.stopButton.addTarget(self, action: #selector(NextBrick.gameStop(_:)), for: UIControlEvents.touchUpInside)
+        self.stopButton.addTarget(self, action: #selector(NextBrick.gameStop(_:)), for: UIControl.Event.touchUpInside)
         self.addSubview(self.stopButton)
         
         let views = [
@@ -107,7 +107,7 @@ class NextBrick: UIView {
         
         self.addConstraints(NSLayoutConstraint.constraints(
             withVisualFormat: "V:[selfView]-(<=0)-[gameButton]",
-            options: NSLayoutFormatOptions.alignAllCenterX,
+            options: NSLayoutConstraint.FormatOptions.alignAllCenterX,
             metrics: nil ,
             views: views)
         )
@@ -121,7 +121,7 @@ class NextBrick: UIView {
         
         self.addConstraints(NSLayoutConstraint.constraints(
             withVisualFormat: "V:[stopButton(60)]-10-[gameButton]",
-            options: NSLayoutFormatOptions.alignAllLeft,
+            options: NSLayoutConstraint.FormatOptions.alignAllLeft,
             metrics: nil, views: views)
         )
     }
@@ -150,10 +150,10 @@ class NextBrick: UIView {
         var gameState = GameState.play
         if selected {
             gameState = GameState.play
-            self.gameButton.setTitle("Pause", for: UIControlState())
+            self.gameButton.setTitle("Pause", for: UIControl.State())
         } else {
             gameState = GameState.pause
-            self.gameButton.setTitle("Play", for: UIControlState())
+            self.gameButton.setTitle("Play", for: UIControl.State())
         }
         return gameState
     }

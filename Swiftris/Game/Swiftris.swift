@@ -97,7 +97,7 @@ class Swiftris: NSObject {
     
     @objc func longPressed(_ longpressGesture:UILongPressGestureRecognizer) {
         if self.gameState == GameState.play {
-            if longpressGesture.state == UIGestureRecognizerState.began {
+            if longpressGesture.state == UIGestureRecognizer.State.began {
                 self.gameView.gameBoard.dropBrick()
             }
         }
@@ -193,7 +193,7 @@ class Swiftris: NSObject {
     }
     
     fileprivate func addRotateAction(_ action:Selector, toButton button:GameButton) {
-        button.addTarget(self, action: action, for: UIControlEvents.touchUpInside)
+        button.addTarget(self, action: action, for: UIControl.Event.touchUpInside)
     }
     
 }
